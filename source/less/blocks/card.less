@@ -1,0 +1,126 @@
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 245px;
+  min-height: 370px;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #9cb269;
+
+  &:nth-child(1) {
+    background-color: #c8d4ac;
+  }
+
+  &:nth-child(2) {
+    background-color: #b2c38a;
+  }
+}
+
+.card__title {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.card__level {
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.card__price {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.card__time {
+  .list-style();
+  margin-bottom: 35px;
+  font-size: 16px;
+}
+
+.card__day {
+  margin-bottom: 15px;
+}
+
+.card__button {
+  margin-top: auto;
+  font-size: 14px;
+
+  &::after {
+    top: 50%;
+    right: -7px;
+  }
+}
+
+@media(min-width: @tablet-width) {
+  .card {
+    width: 206px;
+    min-height: 370px;
+    margin-right: 10px;
+    padding-left: 28px;
+    padding-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .card__button {
+    &::after {
+      top: 50%;
+      right: 5px;
+      width: 40px;
+      height: 15px;
+      background: url("../img/arrow.png") no-repeat 50% 50%;
+      background-size: 40px 15px;
+    }
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .card {
+    width: 377px;
+    min-height: 590px;
+    margin-right: 20px;
+    padding-top: 180px;
+    padding-bottom: 95px;
+    padding-left: 70px;
+    padding-right: 70px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .card__level {
+    font-size: 28px;
+  }
+
+  .card__price {
+    font-size: 22px;
+  }
+
+  .card__time {
+    font-size: 18px;
+  }
+
+  .card__day {
+    margin-bottom: 20px;
+  }
+
+  .card__button {
+    padding: 15px 50px;
+    font-size: 16px;
+
+    &::after {
+      width: 75px;
+      height: 20px;
+      background-size: 75px 20px;
+    }
+  }
+}

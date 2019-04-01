@@ -1,0 +1,167 @@
+.header {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 480px;
+  margin-bottom: 60px;
+  padding-top: 15px;
+  color: #ffffff;
+  background: #91aa59;
+  background:
+    url("../img/header-pilates-mobile.png"),
+    url("../img/points-mobile.png"),
+    url("../img/background-circle.svg");
+  background-repeat: no-repeat, no-repeat,
+    no-repeat;
+  background-position: 30vw 80%, 70vw 15%, -120px -50px;
+  background-size: auto, auto, 880px 530px;
+
+}
+
+.header__container {
+  max-width: 450px;
+}
+
+.header__navigation {
+  display: flex;
+  min-height: 50px;
+  margin-bottom: 30px;
+}
+
+.header__logo {
+  flex-grow: 1;
+  img {
+    .link-style();
+  }
+}
+
+.header__button {
+  width: 20px;
+  height: 20px;
+  background-color: inherit;
+  border: none;
+
+  &--open {
+    background: url("../img/icon-menu-open.svg") no-repeat 50% 50%;
+  }
+
+  &--close {
+    background: url("../img/icon-menu-close.svg") no-repeat 50% 50%;
+    position: absolute;
+    top: 25px;
+    right: 9.375%;
+    z-index: 2;
+  }
+}
+
+.header__menu {
+  .container-mobile();
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 480px;
+  padding-top: 85px;
+  padding-left: 21.875%;
+  background: #91aa59;
+  z-index: 1;
+}
+
+.header__description {
+  margin-top: 90px;
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    min-height: 660px;
+    padding-top: 25px;
+    background: #91aa59;
+    background:
+      url("../img/header-pilates-tablet.png"),
+      url("../img/background-circle.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 40% 60px, -120px -120px;
+    background-size: auto, 800px 780px;
+  }
+
+  .header__container {
+    max-width: 900px;
+  }
+
+  .header__navigation {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+
+  .header__button {
+    &--close {
+      width: 35px;
+      height: 35px;
+      top: 70px;
+      right: 9.16%;
+    }
+  }
+
+  .header__phone-number {
+    display: block;
+    width: 20%;
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: right;
+    color: #000000;
+  }
+
+  .header__logo {
+    flex-grow: 0;
+    width: 20%;
+    margin-right: auto;
+  }
+
+  .header__menu {
+    box-sizing: border-box;
+    min-height: 660px;
+    padding-top: 110px;
+    padding-left: 22.64%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    max-width: 1500px;
+    margin: 0 auto;
+    min-height: 786px;
+    background:
+      url("../img/background-circle.svg") no-repeat;
+    background-position: -90px -130px;
+    background-size: 63% 870px;
+  }
+
+  .header__container {
+    min-height: 786px;
+    background: url("../img/header-pilates-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 240px -10px;
+    background-size: auto;
+  }
+
+  .header__container {
+    max-width: none;
+  }
+
+  .header__button {
+    &--close {
+      width: 45px;
+      height: 45px;
+      top: 50px;
+      right: 20%;
+    }
+  }
+
+  .header__menu {
+    min-height: 786px;
+    padding-top: 175px;
+    padding-left: 30.75%;
+  }
+}

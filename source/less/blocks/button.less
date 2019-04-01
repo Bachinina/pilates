@@ -1,0 +1,42 @@
+.button {
+  .link-style();
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 130px;
+  padding: 10px;
+  font-size: 11px;
+  text-align: center;
+  border: 2px solid #ffffff;
+  border-radius: 100px;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    transform: translate(50%, -50%);
+    content: "";
+    width: 40px;
+    height: 15px;
+    background: url("../img/arrow.png") no-repeat 50% 50%;
+    background-size: 40px 15px;
+  }
+}
+
+@media(min-width: @tablet-width) {
+  .button {
+    &::after {
+      width: 75px;
+      height: 20px;
+      background-size: 75px 20px;
+    }
+  }
+}

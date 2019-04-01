@@ -1,0 +1,42 @@
+.title {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 25px;
+  font-size: 18px;
+  font-weight: 700;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: "";
+    width: 15px;
+    height: 1px;
+    background-color: #000000;
+  }
+}
+
+@media(min-width: @tablet-width) {
+  .title {
+    font-size: 24px;
+    margin-bottom: 45px;
+    padding-left: 50px;
+
+    &::before {
+      width: 37px;
+    }
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .title {
+    font-size: 48px;
+    margin-bottom: 45px;
+    padding-left: 65px;
+
+    &::before {
+      width: 37px;
+      height: 2px;
+    }
+  }
+}

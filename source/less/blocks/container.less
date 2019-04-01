@@ -1,0 +1,19 @@
+.container {
+  .container-mobile();
+  max-width: 290px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    .container-tablet();
+    max-width: 750px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    .container-desktop();
+    max-width: none;
+  }
+}

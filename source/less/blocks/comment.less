@@ -1,0 +1,146 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.comment__image {
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+.comment__author {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.comment__author-name {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.comment__author-age {
+  min-width: 50px;
+  font-size: 14px;
+  text-align: right;
+}
+
+.comment__author-link {
+  font-size: 0;
+  margin-left: 17px;
+
+  svg {
+    fill: #949494;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.comment__quote {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .comment {
+    position: relative;
+    align-items: flex-start;
+    width: 48%;
+    min-height: 250px;
+    margin-left: 34.37%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      width: 50px;
+      height: 60px;
+      background: url("../img/points-tablet.png") no-repeat 50% 50%;
+    }
+  }
+
+  .comment__image {
+    position: absolute;
+    top: 50px;
+    left: -130px;
+  }
+
+  .comment__author {
+    justify-content: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .comment__author-name {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .comment__author-age {
+    min-width: inherit;
+  }
+
+  .comment__quote {
+    padding: 0;
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comment {
+    width: 37.76%;
+    min-height: 250px;
+    margin-left: 41.2%;
+    margin-bottom: 70px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -150px;
+      width: 120px;
+      height: 300px;
+      background: url("../img/points-desktop.png") no-repeat;
+    }
+  }
+
+  .comment__image {
+    top: 20px;
+    left: -240px;
+  }
+
+  .comment__author {
+    margin-bottom: 25px;
+  }
+
+  .comment__author-name {
+    font-size: 28px;
+  }
+
+  .comment__author-age {
+    font-size: 18px;
+  }
+}

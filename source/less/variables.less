@@ -1,0 +1,25 @@
+@mobile-width: 320px;
+@mobile-width-only: 763px;
+@tablet-width: 764px;
+@desktop-width: 1275px;
+@desktop-container-width: 1165px;
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,49 @@
+.menu {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 43.7px;
+}
+
+.menu__list {
+  .list-style();
+  list-style-type: disc;
+}
+
+.menu__item {
+  margin-bottom: 30px;
+}
+
+.menu__link {
+  .link-style();
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .menu {
+    font-size: 36px;
+    line-height: 60px;
+  }
+
+  .menu__item {
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .menu {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .menu__item {
+    margin-bottom: 35px;
+  }
+}

@@ -1,0 +1,46 @@
+.schedule__list {
+  .list-style();
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+  counter-reset: flag;
+}
+
+.schedule__item {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  counter-increment: flag;
+
+  &::before {
+    position: absolute;
+    top: 40px;
+    left: 65px;
+    content: "0"counter(flag);
+    font-weight: 700;
+    font-size: 115px;
+    opacity: 0.1;
+  }
+}
+
+@media(min-width: @tablet-width) {
+  .schedule__list {
+    flex-direction: row;
+  }
+
+  .schedule__item {
+    &::before {
+      left: 40px;
+    }
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .schedule__item {
+    &::before {
+      left: 80px;
+      font-size: 210px;
+    }
+  }
+}
